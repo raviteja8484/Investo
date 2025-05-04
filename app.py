@@ -1,10 +1,13 @@
+"""Streamlit app for tracking WIO FD group investments using dummy JSON data."""
+
+
 import json
 import streamlit as st
 import pandas as pd
 
 
 # Load dummy data from JSON file
-with open("dummy_data.json", "r") as file:
+with open("dummy_data.json", "r",  encoding="utf-8") as file:
     data = json.load(file)
 
 df = pd.DataFrame(data)
