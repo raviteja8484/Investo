@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "investo"
+version = "0.1.0"
+description = ""
+authors = ["Ravi Teja <Raviteja94@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.45.0"
+pandas = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
