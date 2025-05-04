@@ -1,6 +1,7 @@
+import json
 import streamlit as st
 import pandas as pd
-import json
+
 
 # Load dummy data from JSON file
 with open("dummy_data.json", "r") as file:
@@ -16,9 +17,9 @@ st.dataframe(df)
 
 # Total and progress bar
 total = df["Amount (AED)"].sum()
-goal = 35000
+GOAL = 35000
 st.metric("Total Collected", f"AED {total}")
-st.progress(min(total / goal, 1.0))
+st.progress(min(total / GOAL, 1.0))
 
 # Download options
 st.subheader("Export Dummy Data")
