@@ -1,6 +1,0 @@
-[
-    {"Name": "Alice", "Amount (AED)": 10000, "Timestamp": "2025-04-08 10:15:00"},
-    {"Name": "Bob", "Amount (AED)": 7500, "Timestamp": "2025-04-08 11:00:00"},
-    {"Name": "Charlie", "Amount (AED)": 12000, "Timestamp": "2025-04-08 11:30:00"},
-    {"Name": "Diana", "Amount (AED)": 5000, "Timestamp": "2025-04-08 12:15:00"}
-]
