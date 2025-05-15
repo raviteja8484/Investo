@@ -4,6 +4,7 @@ poetry.lock
 .env
 .streamlit/
 database/data.json
+database/summary.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

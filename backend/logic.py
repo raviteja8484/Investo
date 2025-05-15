@@ -16,8 +16,10 @@ def save_data(data):
 
 def add_contribution(name, amount, contribution_date, interest_rate):
     data = load_data()
-    
-    interest_amount = round(amount * (interest_rate / 100), 2)
+
+    # Convert annual interest rate to monthly interest rate
+    monthly_rate = interest_rate / 12 / 100
+    interest_amount = round(amount * monthly_rate, 2)
     total_amount = round(amount + interest_amount, 2)
     maturity_date = contribution_date + timedelta(days=31)
 
@@ -31,5 +33,4 @@ def add_contribution(name, amount, contribution_date, interest_rate):
         "maturity_date": maturity_date.isoformat(),
         "timestamp": datetime.now().isoformat()
     })
-    
     save_data(data)
