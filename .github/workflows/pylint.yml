@@ -28,7 +28,7 @@ jobs:
       run: poetry install
 
     - name: Run pylint
-      run: poetry run streamlit run .\frontend\app.py
+      run: poetry run streamlit run ./frontend/app.py
     
     - name: Analysing the code with pylint
       run: |
