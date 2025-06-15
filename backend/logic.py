@@ -1,16 +1,20 @@
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
+import os
 
 DATA_FILE = Path("database/data.json")
 
 def load_data():
+    if not os.path.exists(DATA_FILE):
+        return []
     if DATA_FILE.exists():
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     return []
 
 def save_data(data):
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
